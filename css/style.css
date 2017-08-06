@@ -132,7 +132,7 @@ img.star-adv {  height: 44px; }
 .plan-title{font-family:"OpenSansSemiBold"; text-align:center; font-size:25px}
 .plan-dop-title{opacity:0.5; color:#2c2c33; text-align:center; font-family:"OpenSansItalic"}
 .plan-ugol-box{position:relative; margin:10px 20px 30px; color:#FFF; border:4px solid #1f1f1f; border-top:none}
-.plan-ugol{position:relative; font-size:18px; text-align:center; margin-left:-14px; margin-right:-14px; padding:15px 30px; background:#00BFFF; color:#fff; ; font-family:"OpenSansSemiBold"}
+.plan-ugol{position:relative; z-index: 10; font-size:18px; text-align:center; margin-left:-14px; margin-right:-14px; padding:15px 30px; background:#00BFFF; color:#fff; ; font-family:"OpenSansSemiBold"}
 .plan-ugol:after{position:absolute; left:0; bottom:-10px; content:''; border-top:10px solid #555; border-left:10px solid transparent}
 .plan-ugol:before{position:absolute; right:0; bottom:-10px; content:''; border-top:10px solid #555; border-right:10px solid transparent}
 .plan-ugol-box ul{text-align:center; margin:0 30px}
@@ -285,3 +285,10 @@ header .phone{padding:20px}
   margin-left: auto;
   margin-right: auto;}
 .imgCenter {display:block; margin:0 auto;}
+img.hitPicture {
+	position: absolute;
+	z-index: 9999;
+	margin-left: -31px;
+    margin-top: -13px;
+    height: 100px;
+}
