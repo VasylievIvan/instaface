@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>InstaFace</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+    <script src="js/wow.min.js"></script>
+    <script>new WOW().init();</script>
+
+    <!-- css+js --> 
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <meta name="description" content="Запуск рекламы за 1 день. Поддержка 24/7. 20% скидка на вторую соц. сеть. 1+1=3 - третья услуга бесплатно. Аудит аккаунта в подарок. Бесплатная консультация.">
+    
+</head>
+
+<body>
+<div id="top">
+    <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+    </span>
+</div>
+<div class="modal fade" id="application" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <div class="gradient">
+                    <h4 class="modal-title">Оставить заявку</h4>
+                    <form id="contact" action="mail.php" method="post">
+                        <div id="note"></div>
+                        <div id="fields">
+                            <input type="hidden" name="sub" value="Новая заявка">
+                            <div class="form-group has-feedback">
+                                <label>Имя</label>
+                                <input type="text" name="username" class="form-control" placeholder="Имя">
+                                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                            </div>
+
+                            <div class="form-group has-feedback">
+                                <label>Телефон или e-mail</label>
+                                <input type="text" name="phone" id="phone" class="form-control" placeholder="+38(099)999-99-99 или e-mail">
+                                <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                                <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                            </div>
+
+                            <input type="submit" class="btn_submit disabled molisan-btn" value="Отправить" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="politic" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <div class="gradient">
+                    <h4 class="modal-title">Политика конфиденциальности</h4>
+                    <p>Настоящая политика конфиденциальности распространяются на всех посетителей и пользователей сайта. Пользователю сайта необходимо внимательно ознакомиться с настоящими Условиями. Пользователь дает разрешение на обработку своих персональных данных, указываемых им в анкете, на сайтах компании. Сайт использует всю добровольно предоставленную пользователем информацию для обработки и предоставления товаров. Никакая информация личного характера об отдельном пользователе не разглашается, кроме случаев, предусмотренных законом.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-header1 hidden-xs hidden-sm">
+
+    <div class="container">
+        <header class="row">
+<style>  
+    html { overflow-x: hidden; }
+    #video{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -100;
+    width: 100%;
+    min-height: 100%;
+    margin:auto;
+	min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;}
+
+</style>
+            <div class="col-md-3 logo-box">
+                <img src="img/logo.png" alt="Продажи из инстаграма" class="img-responsive">
+            </div>
+            <div class="col-md-6">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">                        
+                    </div>
+                    <div >
+                        <ul class="nav navbar-nav">
+                        	<li><a href="#s2">Гарантии</a></li>
+                        	<li><a href="#s3">Тарифы</a></li>
+                        	<li><a href="#s4">Клиенты</a></li>
+                        	<li><a href="#s5">Контакты</a></li>              
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+			
+            <div class="col-md-3 phone">
+                <a href="tel:+380738441184">+380738441184</a>
+				<a href="tel:+380508441184">+380508441184</a>				
+				<a href="tel:+380968441184">+380968441184</a>
+                <p class="messenger">Наши телефоны</p>
+				<a href="tel:+380968441184 ">+380968441184 </a>
+                <p class="messenger">Viber / WhatsApp</p>
+            </div>
+        </header>
+		<div class="row">
+            <div class="col-md-2 col-lg-3"></div>
+				<div class="col-md-8 col-lg-6 descr wow swing">
+					<p class="title">Эффективное продвижение в instagram и facebook.</p>
+					<p class="slogan">Начните получать на 65% больше продаж с инстаграм и facebook уже завтра!</p>
+				</div>
+            <div class="col-md-2 col-lg-3"></div>
+		</div>
+		<div class="row">
+            <div class="col-md-12 modal-btn">
+                <a href="#" data-toggle="modal" data-target="#application" class="btn-inst">Заказать обратный звонок</a>
+            </div>
+        </div>		
+    </div>
+</div>
+<div class="bg-header hidden-lg hidden-md">
+
+    <div class="container">
+        <header class="row">
+       
+            <div class="col-md-3 logo-box">
+
+                <img src="img/logo.png" alt="Продажи из инстаграма" class="img-responsive">
+            </div>
+            <div class="col-md-6">
+                <nav class="navbar navbar-default" role="navigation">
+                    <div class="navbar-header">
+                        <a data-toggle="collapse" data-target="#navbar-collapse" id="nav-anim-toggle">
+                            <span></span>
+                        </a>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbar-collapse">
+                        <ul class="nav navbar-nav">
+                        	<li><a href="#s2">Гарантии</a></li>
+                        	<li><a href="#s3">Тарифы</a></li>
+                        	<li><a href="#s4">Клиенты</a></li>
+                        	<li><a href="#s5">Контакты</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>			
+            <div class="col-md-3 phone">
+                <a href="tel:+380738441184">+380738441184</a>
+				<a href="tel:+380508441184">+380508441184</a>				
+				<a href="tel:+380968441184">+380968441184</a>
+                <p class="messenger">Наши телефоны</p>
+				<a href="tel:+380968441184 ">+380968441184 </a>
+                <p class="messenger">Viber / WhatsApp</p>
+            </div>
+        </header>
+		<div class="row">
+            <div class="col-md-2 col-lg-3"></div>
+				<div class="col-md-8 col-lg-6 descr wow swing">
+					<p class="title">Эффективное продвижение в instagram и facebook.</p>
+					<p class="slogan">Начните получать на 65% больше продаж с инстаграм и facebook уже завтра!</p>
+				</div>
+            <div class="col-md-2 col-lg-3"></div>
+		</div>
+		<div class="row">
+            <div class="col-md-12 modal-btn">
+                <a href="#" data-toggle="modal" data-target="#application" class="btn-inst">Заказать обратный звонок</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="white">
+<div class="container">
+    <div class="row why-box">
+        <div class="col-md-12">
+            <h1>3 ПРИЧИНЫ РАБОТАТЬ С НАМИ</h1>
+        </div>
+        <div class="col-md-4 wow fadeInLeft">
+            <img src="img/why_1.png" alt="Привлечем целевую аудиторию." class="img-responsive">
+            <p class="title" style="color:#0080FF">Привлечем целевую аудиторию.</p>
+            <p class="descr">Только целевая аудитория, заинтересованная в вашем продукте/услуге. Никаких ботов и "Мертвых душ".</p>
+        </div>
+        <div class="col-md-4 wow fadeInUp">
+            <img src="img/why_2.png" alt="Выжмем максимум." class="img-responsive">
+            <p class="title" style="color:#0080FF">Выжмем максимум.</p>
+            <p class="descr">До 2 000 контактов с Вашей целевой аудиторией в день, это то, что отличает нас от конкурентов.</p>
+        </div>
+        <div class="col-md-4 wow fadeInRight">
+            <img src="img/why_3.png" alt="Сделаем аудит." class="img-responsive">
+            <p class="title" style="color:#0080FF">Сделаем аудит.</p>
+            <p class="descr">Проведем аудит Вашего аккаунта в Instagram и Facebook, дадим рекомендации по оформлению и ведению.</p>
+        </div>
+    </div>
+</div>
+</div>
+<div class="container">
+		<div class="col-md-12" style="text-align:center" >
+         <h1><b>Наши работы</b></h1>   
+	</div>
+</div>
+<div class="slider-inst">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators 
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        </ol>-->
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img class="imgCenter" src="img/slide_1.jpg" alt="Делать">
+            </div>
+            <div class="item">
+                <img class="imgCenter" src="img/slide_2.jpg" alt="Реклама">
+            </div>
+            <div class="item">
+                <img class="imgCenter" src="img/slide_3.jpg" alt="Вести" >
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+			<span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+			<span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<div class="container" id="s3">
+    <div class="row plan-box">
+        <div class="col-md-12">
+            <p class="title">Для<span style="color:#FF1493"> Instagram</span></p>
+        </div>
+    </div>
+    <div class="row plan-box">
+        <div class="col-md-4 wow fadeInLeft">
+            <img src="img/star-1.png" alt="30 000 контактов с Вашей целевой аудиторией / за месяц" class="img-responsive star-adv">
+            <p class="plan-title">Старт</p>
+            <p class="plan-dop-title">Раскрути свой личный аккаунт</p>
+            <div class="plan-ugol-box">
+                <p class="plan-ugol">30 000 контактов с Вашей целевой аудиторией за месяц</p>
+                <ul class="list-unstyled">
+                    <li>Оформление и описание аккаунта, создание логотипа</li>
+                    <li>Проверка безопасности аккаунта и рекомендации по ее повышению</li>
+                    <li>Сбор целевой аудитории по конкурентам, тематическим группам, хэштегам, географии, полу, возрасту из Instagram и Вконтакте</li>
+                    <li>Сбор стоп-слов для исключения коммерческих аккаунтов и ботов</li>
+                    <li>Гарантия от блокировки аккаунта</li>
+                    <li>От 1000 до 3000 живых подписчиков</li>
+                </ul>
+                <div class="plan-price">
+                    <p><span>1 999</span> грн/мес.</p>
+                </div>
+            </div>
+            <a href="#" data-toggle="modal" data-target="#application" class="btn_submit">Самый выгодный!</a>
+        </div>
+        <div class="col-md-4 wow fadeInDown">
+            <img src="img/star-3.png" alt="40 000 контактов с Вашей целевой аудиторией / за месяц" class="img-responsive star-adv">
+            <p class="plan-title">Бизнес</p>
+            <p class="plan-dop-title">Начни получать заказы с Инстаграм</p>
+            <div class="plan-ugol-box">
+                <p class="plan-ugol">40 000 контактов с Вашей целевой аудиторией за месяц</p>
+                <ul class="list-unstyled">
+                    <li>Оформление и описание аккаунта, создание логотипа</li>
+                    <li>Проверка безопасности аккаунта и рекомендации по ее повышению</li>
+                    <li>Сбор целевой аудитории по конкурентам, тематическим группам, хэштегам, географии, полу, возрасту из Instagram и Вконтакте</li>
+                    <li>Сбор стоп-слов для исключения коммерческих аккаунтов и ботов</li>
+                    <li>Гарантия от блокировки аккаунта</li>
+                    <li>От 1000 до 3000 живых подписчиков</li>
+					<li>Размещение 30 постов с фотографиями + написание профессиональных текстов к постам</li>
+                    <li>Брендирование фотографий с нанесением логотипа</li>
+                    <li>Подбор, оптимизация и размещение хэштегов</li>
+                    <li>Поддержка 24/7</li>
+                    <li>Общение с подписчиками</li>
+                    <li>Подробный отчет с графикой</li>
+                </ul>
+                <div class="plan-price">
+                    <p><span>2 999</span> грн/мес.</p>
+                </div>
+            </div>
+            <a href="#" data-toggle="modal" data-target="#application" class="btn_submit">Лучший пакет!</a>
+        </div>
+        <div class="col-md-4 wow fadeInRight">
+            <img src="img/star-5.png" alt="60 000 контактов с Вашей целевой аудиторией / за месяц" class="img-responsive star-adv">
+            <p class="plan-title">Бизнес Plus</p>
+            <p class="plan-dop-title">Выжми максимум! Обойди конкурентов</p>
+            <div class="plan-ugol-box">
+                <p class="plan-ugol">60 000 контактов с Вашей целевой аудиторией за месяц</p>
+                <ul class="list-unstyled">
+                    <li>Оформление и описание аккаунта, создание логотипа</li>
+                    <li>Проверка безопасности аккаунта и рекомендации по ее повышению</li>
+                    <li>Сбор целевой аудитории по конкурентам, тематическим группам, хэштегам, географии, полу, возрасту из Instagram и Вконтакте</li>
+                    <li>Сбор стоп-слов для исключения коммерческих аккаунтов и ботов</li>
+                    <li>Гарантия от блокировки аккаунта</li>
+                    <li>От 1000 до 3000 живых подписчиков</li>
+                    <li>Размещение 30 постов с фотографиями + написание профессиональных текстов к постам</li>
+                    <li>Брендирование фотографий с нанесением логотипа</li>
+                    <li>Подбор, оптимизация и размещение хэштегов</li>
+                    <li>Поддержка 24/7</li>
+                    <li>Общение с подписчиками</li>
+                    <li>Подробный отчет с графикой</li>
+                    <li>Размещение 50 постов с фотографиями + написание профессиональных текстов к постам</li>
+                    <li>Разработка и организация 2-х конкурсов или акций</li>
+                    <li>Создание дополнительного аккаунта для 2-х кратного увеличения охвата целевой аудитории</li>
+                </ul>
+                <div class="plan-price">
+                    <p><span>3 999</span> грн/мес.</p>
+                </div>
+            </div>
+            <a href="#" data-toggle="modal" data-target="#application" class="btn_submit">Лучший пакет!</a>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="s3">
+    <div class="row plan-box">
+        <div class="col-md-12">
+            <p class="title">Для <span>FACEBOOK</span></p>
+        </div>
+    </div>
+    <div class="row plan-box">
+        <div class="col-md-4 wow fadeInLeft">
+            <img src="img/star-12.png" alt="30 000 контактов с Вашей целевой аудиторией / за месяц" class="img-responsive star-adv">
+            <p class="plan-title">Easy</p>
+            <p class="plan-dop-title">Раскрути свой личный аккаунт</p>
+            <div class="plan-ugol-box">
+                <p class="plan-ugol">500 контактов с Вашей целевой аудиторией / день</p>
+                <ul class="list-unstyled">
+                    <li>Аудит</li>
+                    <li>Отбор ЦА по городу</li>
+                    <li>Отбор ЦА по группам "вк"</li>
+                    <li>Отбор ЦА по конкурентам</li>
+                    <li>Отбор ЦА по активности</li>
+                    <li>Гарантия от блокировки аккаунта</li>
+                    <li>Фильтр от ботов, магазинов, людей из других стран</li>
+                </ul>
+                <div class="plan-price">
+                    <p><span>1 999</span> грн/мес.</p>
+                </div>
+            </div>
+            <a href="#" data-toggle="modal" data-target="#application" class="btn_submit">Самый выгодный!</a>
+        </div>
+        <div class="col-md-4 wow fadeInDown">
+            <img src="img/star-32.png" alt="40 000 контактов с Вашей целевой аудиторией / за месяц" class="img-responsive star-adv">
+            <p class="plan-title">Medium</p>
+            <p class="plan-dop-title">Начни получать заказы с facebook</p>
+            <div class="plan-ugol-box">
+                <p class="plan-ugol">800 контактов с Вашей целевой аудиторией / день</p>
+                <ul class="list-unstyled">
+                    <li>Аудит</li>
+                    <li>Отбор ЦА по городу</li>
+                    <li>Отбор ЦА по группам "вк"</li>
+                    <li>Отбор ЦА по конкурентам</li>
+                    <li>Отбор ЦА по активности</li>
+                    <li>Гарантия от блокировки аккаунта</li>
+                    <li>Фильтр от ботов, магазинов, людей из других стран</li>
+                    <li><i class="fa fa-plus2" aria-hidden="true"></i> Копирайтинг (написание <br>текстов под фото)</li>
+                </ul>
+                <div class="plan-price">
+                    <p><span>3 299</span> грн/мес.</p>
+                </div>
+            </div>
+            <a href="#" data-toggle="modal" data-target="#application" class="btn_submit">Лучший пакет!</a>
+        </div>
+        <div class="col-md-4 wow fadeInRight">
+            <img src="img/star-52.png" alt="60 000 контактов с Вашей целевой аудиторией / за месяц" class="img-responsive star-adv">
+            <p class="plan-title">Hard</p>
+            <p class="plan-dop-title">Выжми максимум! Обойди конкурентов</p>
+            <div class="plan-ugol-box">
+                <p class="plan-ugol">1 800 контактов с Вашей целевой аудиторией / день</p>
+                <ul class="list-unstyled">
+                    <li>Аудит</li>
+                    <li>Отбор ЦА по городу</li>
+                    <li>Отбор ЦА по группам "вк"</li>
+                    <li>Отбор ЦА по конкурентам</li>
+                    <li>Отбор ЦА по активности</li>
+                    <li>Гарантия от блокировки аккаунта</li>
+                    <li>Фильтр от ботов, магазинов, людей из других стран</li>
+                    <li>Копирайтинг (написание текстов под фото)</li>
+                    <li><i class="fa fa-plus3" aria-hidden="true"></i>Разработка логотипа</li>
+                    <li><i class="fa fa-plus3" aria-hidden="true"></i>Поддержка 24/7</li>
+                    <li><i class="fa fa-plus3" aria-hidden="true"></i>Постинг фотографий</li>
+                    <li><i class="fa fa-plus3" aria-hidden="true"></i>Дубликат аккаунта</li>
+                </ul>
+                <div class="plan-price">
+                    <p><span>4 599</span> грн/мес.</p>
+                </div>
+            </div>
+            <a href="#" data-toggle="modal" data-target="#application" class="btn_submit">Лучший пакет!</a>
+        </div>   
+    </div>
+</div>
+<div class="container" id="s3">
+    <div class="row plan-box">
+        <div class="col-md-12">
+            <p class="title">ВЫ ТАКЖЕ МОЖЕТЕ ПРИОБРЕСТИ</p>
+        </div>
+    </div>
+    <div class="row plan-box">
+        <div class="col-md-4 wow fadeInLeft">
+            <img src="img/massfolloving.jpg" alt="Масфолоунг" class="img-responsive">
+            <p class="plan-title"></p>          
+            <div class="plan-ugol-box">
+                <p class="plan-ugol">Массфолловинг</p>
+                <ul class="list-unstyled">
+                    <li>Массфоловинг вашей 
+					<p>ЦА в течении 3 месяцев</p>
+					<b>Стоимость 1999 - грн.   <br/><br/></b></li>
+                </ul>
+            </div>
+            <a href="#" data-toggle="modal" data-target="#application" class="btn_submit">Заказать</a>
+        </div>
+        <div class="col-md-4 wow fadeInDown">
+            <img src="img/targeting.jpg" alt="Таргетинг" class="img-responsive">
+            <p class="plan-title"></p>
+            <div class="plan-ugol-box">
+                <p class="plan-ugol">Таргетинг</p>
+                <ul class="list-unstyled">
+                    <li><p>Настройка официальной рекламы в инстаграм</p>
+					<b>1500 грн. бюджет включен
+					Стоимость - 3500 грн 
+					</b></li>										 				
+                </ul>               
+            </div>
+            <a href="#" data-toggle="modal" data-target="#application" class="btn_submit">Заказать</a>
+        </div>
+        <div class="col-md-4 wow fadeInRight">
+            <img src="img/copyrighting.jpg" alt="Копирайтиг" class="img-responsive">
+            <p class="plan-title"></p>
+            <div class="plan-ugol-box">
+                <p class="plan-ugol">Копирайтинг</p>
+                <ul class="list-unstyled">
+                    <li><p>Продающие описания под фото и автопостинг Стоимость</p> 
+					<b>30 шт. - 799 грн.<br/>60 шт. - 1299 грн.</b></li>
+                </ul>
+            </div>
+            <a href="#" data-toggle="modal" data-target="#application" class="btn_submit">Заказать</a>
+        </div>
+		
+		<div class="center-block">
+        <img src="img/copyrighting.jpg" alt="Копирайтиг" class="img-responsive">
+            <p class="plan-title"></p>
+            <div class="plan-ugol-box">
+                <p class="plan-ugol">Blogger</p>
+                <ul class="list-unstyled">
+                    <li><b>Стань звездой в Instagram!</b></li>
+                    <li>Поможем вам подобрать популярных блогеров для повышение продаж</li>
+                </ul>
+				<div class="plan-price">
+                    <p>от<span> 1 499</span> грн</p>
+                </div>    
+            </div>
+            <a href="#" data-toggle="modal" data-target="#application" class="btn_submit">Узнать подробней</a>
+        </div>
+		<div class="center-block1">
+        <img src="img/1plus1.png" alt="Копирайтиг" class="img-responsive">
+            <div class="plan-ugol-box">
+                <p class="plan-ugol">УНИКАЛЬНОЕ ПРЕДЛОЖЕНИЕ!</p>
+                <ul class="list-unstyled">
+                    <li>Приобретая комплекс услуг, вы получаете для себя выгодное предложение от которого невозможно отказаться!</li>
+                </ul>
+				<div class="plan-price">
+                    <p><span>1+1=3</span></p>
+                </div>    
+            </div>
+            <a href="#" data-toggle="modal" data-target="#application" class="btn_submit">Заказать</a>
+        </div>
+    </div>
+	
+</div>
+
+<div class="container" id="s2">
+    <div class="row garant-box">
+        <div class="col-md-12">          
+            <p class="title">Наши гарантии</p>
+        </div>
+    </div>
+    <div class="row garant-box">
+        <div class="col-md-12">
+            <ul class="list-unstyled garant">
+                <li class="wow fadeInLeft">
+                    <img src="img/garant-1.png" alt="Реальные подписчики" class="img-responsive">
+                    <p class="garant-title" style="color:#008000">Реальные подписчики</p>
+                    <p class="garant-descr">Никаких ботов и накруток. Мы напрямую заинтересованы в сотрудничестве.</p>
+                </li>
+                <li class="wow fadeInDown">
+                    <img src="img/garant-2.png" alt="Качество продвижения" class="img-responsive">
+                    <p class="garant-title" style="color:#008000">Качество продвижения</p>
+                    <p class="garant-descr">Вы будете иметь дело с креативными перфекционистами. Этим все сказано.</p>
+                </li>
+                <li class="wow fadeInRight">
+                    <img src="img/garant-3.png" alt="Поддержка" class="img-responsive">
+                    <p class="garant-title" style="color:#008000">Поддержка</p>
+                    <p class="garant-descr">Вы всегда сможете  рассчитывать на наш совет и помощь в SMM-продвжении.</p>
+                </li>
+                <li class="wow fadeInLeft">
+                    <img src="img/garant-4.png" alt="Очевидный результат" class="img-responsive">
+                    <p class="garant-title" style="color:#008000">Очевидный результат</p>
+                    <p class="garant-descr">Прирост подписчиков будет составлять 1500 - 4000 чел/мес.</p>
+                </li>
+                <li class="wow fadeInUp">
+                    <img src="img/garant-5.png" alt="Безопасность" class="img-responsive">
+                    <p class="garant-title" style="color:#008000">Безопастность</p>
+                    <p class="garant-descr">Мы гарантируем вам аккуратную работу с Вашим аккаунтом и Вашими данными.</p>
+                </li>
+                <li class="wow fadeInDown">
+                    <img src="img/garant-6.png" alt="Уникальность" class="img-responsive">
+                    <p class="garant-title" style="color:#008000">Уникальность</p>
+                    <p class="garant-descr">Мы не сторонники шаблонов и всегда находим рабочие идеи для самых разных ниш.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 modal-btn wow swing">
+            <a href="#" data-toggle="modal" data-target="#application" class="btn-inst">Получить консультацию</a>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="s4">
+    <div class="row plan-box">
+        <div class="col-md-12">
+            <p class="title">НАШИ КЛИЕНТЫ</p>
+        </div>
+    </div>
+    <div class="row clients-box">
+        <div class="col-md-12">
+            <ul class="list-unstyled">
+                <li>
+                    <img src="img/1.png" alt="Салоны красоты" class="img-responsive">
+                    <p>Салоны красоты</p>
+                </li>
+                <li>
+                    <img src="img/2.png" alt="Showroom fashion retail" class="img-responsive">
+                    <p>Showroom fashion retail</p>
+                </li>
+                <li>
+                    <img src="img/3.png" alt="E-commerce" class="img-responsive">
+                    <p>E-commerce</p>
+                </li>
+                <li>
+                    <img src="img/4.png" alt="Клиники и доктора" class="img-responsive">
+                    <p>Клиники и доктора</p>
+                </li>
+                <li>
+                    <img src="img/5.png" alt="Рестораны, клубы и кафе" class="img-responsive">
+                    <p>Рестораны, клубы и кафе</p>
+                </li>
+
+                <li>
+                    <img src="img/6.png" alt="Туроператоры и турагенства" class="img-responsive">
+                    <p>Туроператоры и турагенства</p>
+                </li>
+                <li>
+                    <img src="img/7.png" alt="Автосалоны" class="img-responsive">
+                    <p>Автосалоны</p>
+                </li>
+                <li>
+                    <img src="img/8.png" alt="Авиакомпании" class="img-responsive">
+                    <p>Авиакомпании</p>
+                </li>
+                <li>
+                    <img src="img/9.png" alt="СМИ" class="img-responsive">
+                    <p>СМИ</p>
+                </li>
+                <li>
+                    <img src="img/10.png" alt="Торговые центры" class="img-responsive">
+                    <p>Торговые центры</p>
+                </li>
+
+                <li>
+                    <img src="img/11.png" alt="Архитекторы" class="img-responsive">
+                    <p>Архитекторы</p>
+                </li>
+                <li>
+                    <img src="img/12.png" alt="Фотографы" class="img-responsive">
+                    <p>Фотографы</p>
+                </li>
+                <li>
+                    <img src="img/13.png" alt="Стилисты" class="img-responsive">
+                    <p>Стилисты</p>
+                </li>
+                <li>
+                    <img src="img/14.png" alt="Фотомодели" class="img-responsive">
+                    <p>Фотомодели</p>
+                </li>
+                <li>
+                    <img src="img/15.png" alt="Артисты" class="img-responsive">
+                    <p>Артисты</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="footer-bg">
+    <div class="container" id="s5">
+        <footer class="row">
+            <div class="col-md-3 logo-box">
+                <img src="img/logo.png" alt="Продажи из инстаграма" class="img-responsive">
+                <a href="#" data-toggle="modal" data-target="#application" class="footer-btn">Обратный звонок</a>
+            </div>
+            <div class="col-md-3 footer-contacts">
+                <h3>Контакты</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="img/mail.png" alt="Почта">
+                        </td>
+                        <td>
+                            <p>
+                                <span>E-mail:</span>
+                                <a href="mailto:instaface67@gmail.com">instaface67@gmail.com</a>
+                            </p>
+                        </td>
+                    </tr>
+					<tr>
+                        <td>
+                            <img src="img/skype.png" alt="Viber">
+                        </td>
+                        <td>
+                            <p>
+                                <span>Skype:</span>
+                                <a href='skype:live:instaface_6?chat'>Instaface</a>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="img/viber.png" alt="Viber">
+                        </td>
+                        <td>
+                            <p>
+                                <span>Viber \ WhatsApp:</span>
+                                <a href="tel:+380968441184">+380968441184</a>
+                            </p>
+                        </td>
+                    </tr>
+					
+                </table>
+            </div>
+            <div class="col-md-3 footer-contacts">
+                <h3 class="footer-title">Контакты</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <img src="img/phone.png" alt="Телефон">
+                        </td>
+                        <td>
+                            <p>
+                                <span>Телефон:</span>
+                                <a href="tel:+380738441184">+380738441184</a>
+								<p><a href="tel:+380508441184">+380508441184</a></p>
+								<p><a href="tel:+380968441184">+380968441184</a></p>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-md-3 footer-menu">
+                <ul class="list-unstyled">
+                    <li><a href="#s2">Гарантии</a></li>
+                    <li><a href="#s3">Тарифы</a></li>
+                    <li><a href="#s4">Клиенты</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<div class="politic">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <p>2014. Все права защищены.</p>
+            </div>
+            <div class="col-md-6">
+                <a href="#" data-toggle="modal" data-target="#politic">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+<script src="js/my_script.js"></script>
+<script src="js/jquery.maskedinput.js"></script>
+</body>
+
+<!-- BEGIN LEADGENIC CODE {literal} -->
+<noindex>
+<!-- Put this script tag before the </body> tag of your page -->
+<script type="text/javascript" src="https://gate.leadgenic.ru/getscript?site=580499870cf28b03102c8749"></script>
+
+
+<script type="text/javascript" src="//vk.com/js/api/openapi.js?136"></script>
+
+</html>
