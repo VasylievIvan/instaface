@@ -292,3 +292,11 @@ img.hitPicture {
     margin-top: -13px;
     height: 100px;
 }
+@media (max-width:500px) {
+	.center-block1 img {
+		width: 100%;
+	}
+	.center-block1 {
+		width: 100%;
+	}
+}
